@@ -9,8 +9,16 @@ You can visit your MusicTwin's profile and discover new artists, playlists, trac
 
 Live Demo: https://musictwin.xyz
 
+## Tech Stack:
 
-# Screenshots:
+- Node.js / Express
+
+- Firebase
+
+- HTML/CSS/JS
+
+
+## Screenshots:
 
 
 ![](/public/ss/img1.jpeg)
