@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html id="app" lang="en" dir="ltr" ng-csp="" ng-strict-di="" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title >MusicTwin Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--<base href="/">--><base href=".">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/icon.ico" />
+
+  <link href="/css/style.css" media="screen" rel="stylesheet">
+
+  </head>
+
+<style type="text/css">
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+body {
+  background-image: url('/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+td{
+  color:black;
+}
+</style>
+
+
+<body ng-controller="LoginController" class="ng-scope">
+  <!-- ngInclude: template --><div ng-include="template" class="ng-scope"><div  sp-header="" class="ng-scope"><div class="head ">
+  <a  tabindex="-1" title="MusicTwin" ng-href="/en" > <img class="center"  src="/img/logo.png"> </a>
+</div>
+</div>
+
+<div class="container-fluid login ng-scope">
+  <div class="content">
+    <h2>Here is your result <%=data.display_name%> </h2>
+  
+     <h1>Your MusicTwin is <span style="color:#1DBD56"><%=data.MusicTwin.display_name %></span></h1>
+  <h3>Here is the link for your MusicTwin's profile:</h3>
+ 
+ <a target="_blank"  href="https://open.spotify.com/user/<%=data.MusicTwin.id%>" > 
+  <div class="col-xs-12 col-sm-12">
+          <button class="btn btn-block btn-green ng-binding" id="login-button" ><%=data.MusicTwin.display_name %></button>
+        </div>
+
+  </a>
+  <hr>
+  <br><br>
+   <a target="_blank"  href="https://donorbox.org/buy-a-coffee?default_interval=o" > 
+  <div class="col-xs-12 col-sm-12">
+          <button class="btn btn-block btn-green ng-binding" id="login-button" >Buy me a coffee :)</button>
+  </div>
+  </a>
+
+
+  <h3>Your Playlists (Up to 20 playlists)</h3>
+    <table>
+  <% for(var i=0; i < data.playlists.length; i++) { %>
+     <tr>
+       <td><%= data.playlists[i].name %></td>
+       <td><%= data.playlists[i].count %> Songs</td>
+     </tr>
+  <% } %>
+  </table>
+
+
+
+
+
+  </div><!-- .content -->
+</div><!-- .container -->
+</div>
+
+

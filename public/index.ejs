@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html id="app" lang="en" dir="ltr" ng-csp="" ng-strict-di="" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title >MusicTwin Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--<base href="/">--><base href=".">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/icon.ico" />
+
+  <link href="/css/style.css" media="screen" rel="stylesheet">
+
+  </head>
+
+<style type="text/css">
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+body {
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0)), url('/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+</style>
+
+
+<body ng-controller="LoginController" class="ng-scope">
+  <!-- ngInclude: template --><div ng-include="template" class="ng-scope"><div  sp-header="" class="ng-scope"><div class="head ">
+  <a  tabindex="-1" title="MusicTwin" ng-href="/en" > <img class="center"  src="/img/logo.png"> </a>
+</div>
+</div>
+
+<div class="container-fluid login ng-scope">
+  <div class="content">
+    <!-- ngIf: showContinueLabel --><div class="row ng-scope" ng-if="showContinueLabel">
+          <div class="col-xs-12 text-center">
+              <span id="login-to-continue" class="h5 ng-binding">To find your <span style="color:#1DBD56">MusicTwin</span>, log in to Spotify.</span>
+          </div>
+    </div><!-- end ngIf: showContinueLabel -->
+
+
+
+      <!-- ngIf: showAutomationKey -->
+      <a href='/login'>
+      <div class="row row-submit">
+
+        <div class="col-xs-12 col-sm-12">
+          <button class="btn btn-block btn-green ng-binding" id="login-button" >Log In</button>
+        </div>
+      </div>
+      </a>
+
+
+
+  </div><!-- .content -->
+</div><!-- .container -->
+</div>
+
+
