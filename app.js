@@ -10,7 +10,6 @@ var cookieParser = require('cookie-parser');
 
 var client_id = ''; // Your client id
 var client_secret = ''; // Your secret
-//var redirect_uri = 'https://musictwinfinder.herokuapp.com/callback/'; // Your redirect uri
 
 // Your web app's Firebase configuration
 var firebase = require("firebase");
@@ -198,7 +197,6 @@ app.get('/callback', function(req, res) {
               console.log(playlist.name);
             });
 
-            //TODO: add firebase
             tracks.sort();
             tracks = tracks.filter((x, i, a) => a.indexOf(x) == i);
 
@@ -248,20 +246,8 @@ app.get('/callback', function(req, res) {
 
           });
         });
-
-        // we can also pass the token to the browser to make requests from there
-        // res.redirect('/#' +
-        //   querystring.stringify({
-        //     access_token: access_token,
-        //     refresh_token: refresh_token
-        //   }));
       }
-      //  else {
-      //   res.redirect('/#' +
-      //     querystring.stringify({
-      //       error: 'invalid_token'
-      //     }));
-      // }
+
     });
   }
 
